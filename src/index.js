@@ -1,20 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-function Greeting() {
+const BookList = () => {
   return (
-    <div>
-      <Person />
-      <Message />
-    </div>
+    <section>
+      <Book />
+      <Book />
+      <Book />
+    </section>
   );
-}
-
-const Person = () => <h2>Zidan Abraham</h2>;
-const Message = () => {
-  return <p>Currently learning React JS</p>;
 };
+
+const Book = () => {
+  return (
+    <article>
+      <Title />
+      <Image />
+      <Author />
+    </article>
+  );
+};
+
+const Title = () => <h2>The Democrat Party Hates America Hardcover</h2>;
+const Image = () => (
+  <img
+    src="https://m.media-amazon.com/images/I/61sp+sMfrXL._SY425_.jpg"
+    alt="The Democrat Party Hates America Hardcover"
+  />
+);
+const Author = () => <h4>Mark R. Levin</h4>;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Greeting />);
+root.render(<BookList />);
