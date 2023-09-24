@@ -8,7 +8,7 @@ const BookList = () => {
       <h1 className="mb-5 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
         Best Seller Books
       </h1>
-      <section className="tablet:grid-cols-3 laptop:grid-cols-4 grid grid-cols-1 items-center justify-center gap-5">
+      <section className="grid grid-cols-1 items-center justify-center gap-5 tablet:grid-cols-3 laptop:grid-cols-4">
         <Book />
         <Book />
         <Book />
@@ -39,8 +39,8 @@ const Title = () => {
 
 const Image = () => (
   <img
-    className="tablet:w-5/6 w-full object-cover"
-    src="https://m.media-amazon.com/images/I/61sp+sMfrXL._SY425_.jpg"
+    className="w-full object-cover tablet:w-5/6"
+    src="./assets/images/book-1.jpg"
     alt="The Democrat Party Hates America Hardcover"
   />
 );
