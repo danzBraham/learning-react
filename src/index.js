@@ -32,10 +32,11 @@ const books = [
 const BookList = () => {
   document.documentElement.style.backgroundColor = "#0f172a";
   return (
-    <main className="p-5 text-white">
-      <h1 className="mb-5 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
+    <main className="flex flex-col gap-5 px-7 py-5 text-white">
+      <h1 className="bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
         Best Seller Books
       </h1>
+      <SearchBook />
       <section className="grid w-full grid-cols-1 justify-items-center gap-5 tablet:grid-cols-3 laptop:grid-cols-4">
         {books.map((book) => (
           <Book key={book.id} {...book} />
@@ -45,9 +46,42 @@ const BookList = () => {
   );
 };
 
+const SearchBook = () => {
+  return (
+    <section>
+      <form
+        autoComplete="off"
+        className="flex justify-center gap-3"
+        onSubmit={(e) => {
+          e.preventDefault();
+          console.log("Form Submitted");
+        }}
+      >
+        <input
+          type="text"
+          name="search"
+          placeholder="Search book..."
+          className="w-full rounded-lg border-2 border-amber-500 px-4 py-2 text-black outline-none tablet:w-1/2"
+          onChange={(e) => console.log(e.target.value)}
+        />
+        <button
+          type="submit"
+          className="rounded-lg bg-gradient-to-r from-amber-500 to-pink-500 px-4 py-2 text-white"
+          onClick={() => console.log("Button Clicked")}
+        >
+          Search
+        </button>
+      </form>
+    </section>
+  );
+};
+
 const Book = ({ title, author, img }) => {
   return (
-    <article className="flex flex-col items-center justify-between gap-3 rounded-2xl border-[1px] border-slate-300 bg-gradient-to-br from-slate-800 to-slate-600 p-4 shadow-md">
+    <article
+      className="flex w-full cursor-pointer flex-col items-center justify-between gap-3 rounded-2xl border-[1px] border-slate-300 bg-gradient-to-br from-slate-800 to-slate-600 p-4 shadow-md"
+      onClick={() => alert(title)}
+    >
       <h2 className="text-center text-lg font-medium">{title}</h2>
       <img className="w-4/5 object-cover " src={img} alt={title} />
       <h4 className="text-lg ">{author}</h4>
