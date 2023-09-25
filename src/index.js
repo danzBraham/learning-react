@@ -31,6 +31,12 @@ const books = [
 
 const BookList = () => {
   document.documentElement.style.backgroundColor = "#0f172a";
+
+  const getBook = (id) => {
+    const book = books.find((book) => book.id === id);
+    console.log(book);
+  };
+
   return (
     <main className="flex flex-col gap-5 px-7 py-5 text-white">
       <h1 className="bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent">
@@ -39,7 +45,7 @@ const BookList = () => {
       <SearchBook />
       <section className="grid w-full grid-cols-1 justify-items-center gap-5 tablet:grid-cols-3 laptop:grid-cols-4">
         {books.map((book) => (
-          <Book key={book.id} {...book} />
+          <Book key={book.id} {...book} getBook={getBook} />
         ))}
       </section>
     </main>
@@ -76,11 +82,11 @@ const SearchBook = () => {
   );
 };
 
-const Book = ({ title, author, img }) => {
+const Book = ({ id, title, author, img, getBook }) => {
   return (
     <article
       className="flex w-full cursor-pointer flex-col items-center justify-between gap-3 rounded-2xl border-[1px] border-slate-300 bg-gradient-to-br from-slate-800 to-slate-600 p-4 shadow-md"
-      onClick={() => alert(title)}
+      onClick={() => getBook(id)}
     >
       <h2 className="text-center text-lg font-medium">{title}</h2>
       <img className="w-4/5 object-cover " src={img} alt={title} />
