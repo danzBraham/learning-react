@@ -10,7 +10,7 @@
 // import UseEffectBasics from "./topics/02-useEffect/02-useEffect-basics";
 // import UseEffectMultiple from "./topics/02-useEffect/03-useEffect-multiple-effects";
 // import UseEffectFetchData from "./topics/02-useEffect/04-useEffect-fetch-data";
-import CleanupFunction from "./topics/02-useEffect/05-cleanup-function";
+// import CleanupFunction from "./topics/02-useEffect/05-cleanup-function";
 
 // Conditional Rendering
 // import MultipleReturnsBasics from "./topics/03-conditional-rendering/01-multiple-returns-basics";
@@ -21,12 +21,25 @@ import CleanupFunction from "./topics/02-useEffect/05-cleanup-function";
 // import ToggleChallenge from "./topics/03-conditional-rendering/06-toggle-challenge";
 // import UserChallenge from "./topics/03-conditional-rendering/07-user-challenge";
 
+// Project Structure
+// Default Export
+import Navbar from "./topics/04-project-structure/components/Navbar";
+// Named Export
+import { Home, About } from "./topics/04-project-structure/Pages";
+// Export Group
+import Example from "./topics/04-project-structure/Example";
+
 export default function App() {
   document.documentElement.style.backgroundColor = "#020617";
 
   return (
-    <main className="flex flex-col items-center justify-center gap-5 p-5">
-      <CleanupFunction />
-    </main>
+    <>
+      <Navbar />
+      <main className="flex flex-col items-center justify-center gap-5 p-5">
+        <Home />
+        <About />
+        <Example />
+      </main>
+    </>
   );
 }
