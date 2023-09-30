@@ -23,23 +23,21 @@
 
 // Project Structure
 // Default Export
-import Navbar from "./topics/04-project-structure/components/Navbar";
+// import Navbar from "./topics/04-project-structure/components/Navbar";
 // Named Export
-import { Home, About } from "./topics/04-project-structure/Pages";
+// import { Home, About } from "./topics/04-project-structure/Pages";
 // Export Group
-import Example from "./topics/04-project-structure/Example";
+// import Example from "./topics/04-project-structure/Example";
+
+// Leverage Javascript
+import List from "./topics/05-leverage-javascript/List";
 
 export default function App() {
   document.documentElement.style.backgroundColor = "#020617";
 
   return (
-    <>
-      <Navbar />
-      <main className="flex flex-col items-center justify-center gap-5 p-5">
-        <Home />
-        <About />
-        <Example />
-      </main>
-    </>
+    <main className="flex flex-col items-center justify-center gap-5 p-5 text-white">
+      <List />
+    </main>
   );
 }
