@@ -30,14 +30,25 @@
 // import Example from "./topics/04-project-structure/Example";
 
 // Leverage Javascript
-import List from "./topics/05-leverage-javascript/List";
+// import List from "./topics/05-leverage-javascript/List";
+
+// Forms
+import ControlledInput from "./topics/06-forms/01-controlled-inputs";
+import UserChallenge from "./topics/06-forms/02-user-challenge";
+import MultipleInputs from "./topics/06-forms/03-multiple-inputs";
+import OtherInputs from "./topics/06-forms/04-other-inputs";
+import UncontrolledInputs from "./topics/06-forms/05-form-data";
 
 export default function App() {
   document.documentElement.style.backgroundColor = "#020617";
 
   return (
-    <main className="flex flex-col items-center justify-center gap-5 p-5 text-white">
-      <List />
+    <main className="flex flex-col items-center justify-center gap-5 px-5 py-16 text-white">
+      <ControlledInput />
+      <UserChallenge />
+      <MultipleInputs />
+      <OtherInputs />
+      <UncontrolledInputs />
     </main>
   );
 }
