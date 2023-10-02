@@ -47,15 +47,17 @@
 // import FetchData from "./topics/08-custom-hooks/02-fetch-data";
 
 // Context API
-import Navbar from "./topics/09-context-api/Navbar";
+// import Navbar from "./topics/09-context-api/Navbar";
+
+// useReducer
+import UseReducerBasics from "./topics/10-useReducer/01-useReducer-basics";
 
 export default function App() {
   document.documentElement.style.backgroundColor = "#020617";
 
   return (
-    <>
-      <Navbar />
-      <main className="flex flex-col items-center justify-center gap-5 px-5 py-16 text-white"></main>
-    </>
+    <main className="flex flex-col items-center justify-center gap-5 px-5 py-16 text-white">
+      <UseReducerBasics />
+    </main>
   );
 }
