@@ -43,16 +43,19 @@
 // import UseRefBasics from "./topics/07-useRef/01-useRef-basics";
 
 // Custom Hooks
-import Toggle from "./topics/08-custom-hooks/01-toggle";
-import FetchData from "./topics/08-custom-hooks/02-fetch-data";
+// import Toggle from "./topics/08-custom-hooks/01-toggle";
+// import FetchData from "./topics/08-custom-hooks/02-fetch-data";
+
+// Context API
+import Navbar from "./topics/09-context-api/Navbar";
 
 export default function App() {
   document.documentElement.style.backgroundColor = "#020617";
 
   return (
-    <main className="flex flex-col items-center justify-center gap-5 px-5 py-16 text-white">
-      <Toggle />
-      <FetchData />
-    </main>
+    <>
+      <Navbar />
+      <main className="flex flex-col items-center justify-center gap-5 px-5 py-16 text-white"></main>
+    </>
   );
 }
