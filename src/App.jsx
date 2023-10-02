@@ -40,14 +40,19 @@
 // import UncontrolledInputs from "./topics/06-forms/05-form-data";
 
 // useRef
-import UseRefBasics from "./topics/07-useRef/01-useRef-basics";
+// import UseRefBasics from "./topics/07-useRef/01-useRef-basics";
+
+// Custom Hooks
+import Toggle from "./topics/08-custom-hooks/01-toggle";
+import FetchData from "./topics/08-custom-hooks/02-fetch-data";
 
 export default function App() {
   document.documentElement.style.backgroundColor = "#020617";
 
   return (
     <main className="flex flex-col items-center justify-center gap-5 px-5 py-16 text-white">
-      <UseRefBasics />
+      <Toggle />
+      <FetchData />
     </main>
   );
 }
