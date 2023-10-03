@@ -53,20 +53,17 @@
 // import UseReducerBasics from "./topics/10-useReducer/01-useReducer-basics";
 
 // Performance
-import LowerState from "./topics/11-performance/01-lower-state";
-import LowerStateChallenge from "./topics/11-performance/02-lower-state-challenge";
-import Hooks from "./topics/11-performance/03-hooks";
-import UseTransition from "./topics/11-performance/04-react-18";
+// import LowerState from "./topics/11-performance/01-lower-state";
+// import LowerStateChallenge from "./topics/11-performance/02-lower-state-challenge";
+// import Hooks from "./topics/11-performance/03-hooks";
+// import UseTransition from "./topics/11-performance/04-react-18";
 
 export default function App() {
   document.documentElement.style.backgroundColor = "#020617";
 
   return (
     <main className="flex flex-col items-center justify-center gap-5 px-5 py-16 text-white">
-      <LowerState />
-      <LowerStateChallenge />
-      <Hooks />
-      <UseTransition />
+      <h1 className="text-3xl font-bold">Advanced React</h1>
     </main>
   );
 }
