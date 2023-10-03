@@ -1,20 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export default function UseEffectFetchData() {
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("https://api.github.com/users");
-        const data = await response.json();
-        setUsers(data);
-      } catch (error) {
-        console.error(`Error: ${error}`);
-      }
-    };
-    fetchData();
+  const fetchData = useCallback(async () => {
+    try {
+      const response = await fetch("https://api.github.com/users");
+      const data = await response.json();
+      setUsers(data);
+    } catch (error) {
+      console.error(`Error: ${error}`);
+    }
   }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   return (
     <section className="flex w-full flex-col items-center justify-center gap-5 rounded-lg border-2 border-slate-400 bg-gradient-to-br from-slate-900 to-slate-600 p-5 text-white shadow-md lg:w-1/2">

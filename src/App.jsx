@@ -1,11 +1,11 @@
-// useState Hook
+// useState
 // import ErrorExamples from "./topics/01-useState/01-error-example";
 // import UseStateBasics from "./topics/01-useState/02-useState-basics";
 // import UseStateArray from "./topics/01-useState/03-useState-array";
 // import UseStateObject from "./topics/01-useState/04-useState-object";
 // import UseStateGotcha from "./topics/01-useState/05-useState-gotcha";
 
-// useEffect Hook
+// useEffect
 // import CodeExample from "./topics/02-useEffect/01-code-example";
 // import UseEffectBasics from "./topics/02-useEffect/02-useEffect-basics";
 // import UseEffectMultiple from "./topics/02-useEffect/03-useEffect-multiple-effects";
@@ -50,14 +50,23 @@
 // import Navbar from "./topics/09-context-api/Navbar";
 
 // useReducer
-import UseReducerBasics from "./topics/10-useReducer/01-useReducer-basics";
+// import UseReducerBasics from "./topics/10-useReducer/01-useReducer-basics";
+
+// Performance
+import LowerState from "./topics/11-performance/01-lower-state";
+import LowerStateChallenge from "./topics/11-performance/02-lower-state-challenge";
+import Hooks from "./topics/11-performance/03-hooks";
+import UseTransition from "./topics/11-performance/04-react-18";
 
 export default function App() {
   document.documentElement.style.backgroundColor = "#020617";
 
   return (
     <main className="flex flex-col items-center justify-center gap-5 px-5 py-16 text-white">
-      <UseReducerBasics />
+      <LowerState />
+      <LowerStateChallenge />
+      <Hooks />
+      <UseTransition />
     </main>
   );
 }
